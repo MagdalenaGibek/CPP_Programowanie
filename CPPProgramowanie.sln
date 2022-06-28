@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hangman", "Hangman\Hangman.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Wordle", "Wordle\Wordle.vcxproj", "{6777A5AC-CF7D-4F45-8A03-6B9E9775BE26}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Knapsack", "Knapsack\Knapsack.vcxproj", "{31ED74D4-43DD-46B3-9EE0-E8758180B76D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{6777A5AC-CF7D-4F45-8A03-6B9E9775BE26}.Release|x64.Build.0 = Release|x64
 		{6777A5AC-CF7D-4F45-8A03-6B9E9775BE26}.Release|x86.ActiveCfg = Release|Win32
 		{6777A5AC-CF7D-4F45-8A03-6B9E9775BE26}.Release|x86.Build.0 = Release|Win32
+		{31ED74D4-43DD-46B3-9EE0-E8758180B76D}.Debug|x64.ActiveCfg = Debug|x64
+		{31ED74D4-43DD-46B3-9EE0-E8758180B76D}.Debug|x64.Build.0 = Debug|x64
+		{31ED74D4-43DD-46B3-9EE0-E8758180B76D}.Debug|x86.ActiveCfg = Debug|Win32
+		{31ED74D4-43DD-46B3-9EE0-E8758180B76D}.Debug|x86.Build.0 = Debug|Win32
+		{31ED74D4-43DD-46B3-9EE0-E8758180B76D}.Release|x64.ActiveCfg = Release|x64
+		{31ED74D4-43DD-46B3-9EE0-E8758180B76D}.Release|x64.Build.0 = Release|x64
+		{31ED74D4-43DD-46B3-9EE0-E8758180B76D}.Release|x86.ActiveCfg = Release|Win32
+		{31ED74D4-43DD-46B3-9EE0-E8758180B76D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

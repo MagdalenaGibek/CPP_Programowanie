@@ -1,29 +1,25 @@
 #include "Hangman.h"
+#include <string>
 #include <iostream>
-
 
 int main()
 {
+	//pozniej tutaj dojdzie kawalek generujacy secret
 	Hangman game("wisielec");
-	bool finished = false;
+	bool finished;
+	do
+	{
+		std::string guess = game.getGuess(); // zwracac _ A _ _ _ A _
+		std::cout << guess << std::endl;
+		std::string alphabet = game.getAlphabet(); // zwraca _ B C D E _
+		std::cout << alphabet << std::endl;
 
-	   do
-	   {
-		   std::string guess = game.getGuess();
-		   std::cout << guess << std::endl;
-		   std::string alphabet = game.getAlphabet();
-		   std::cout << alphabet << std::endl;
+		std::cout << "Guess a letter: ";
+		char letter;
+		std::cin >> letter;
 
-		   std::cout << "Guess a letter: ";
-		   char letter;
-		   std::cin >> letter;
-
-		   finished = game.guess(letter);
-
-		   
-	   } while (!(finished || game.attemptsLeft()==0)); 
-std::cout << "Secret key was: " << game.getSecret();
-
+		finished = game.guess(letter); // zgadujemy - zmieniamy zarowno guess jak i alfabet
+	} while (!finished);
+	std::cout << "Secret key was: " << game.getSecret();
+	return 0;
 }
-
-

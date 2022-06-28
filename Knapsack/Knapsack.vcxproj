@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{6777a5ac-cf7d-4f45-8a03-6b9e9775be26}</ProjectGuid>
-    <RootNamespace>Wordle</RootNamespace>
+    <ProjectGuid>{31ed74d4-43dd-46b3-9ee0-e8758180b76d}</ProjectGuid>
+    <RootNamespace>Knapsack</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,11 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Knapsack.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Wordle.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Wordle.hpp" />
+    <ClInclude Include="Knapsack.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

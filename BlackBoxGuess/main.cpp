@@ -1,17 +1,17 @@
 
+#include "BlackBoxGuess.hpp";
 #include <iostream>
-#include "BlackBoxGuess.hpp"
 
 int main()
 {
 	std::cout << "Podaj zakres liczb: ";
 	int range;
 	std::cin >> range;
-	BlackBoxGuess box(50); // should be parametriezed
+	BlackBoxGuess box(range); //parameterized
 	int result;
 	do
 	{
-		std::cout << "Podaj liczbę: ";
+		std::cout << "Podaj liczbe: ";
 		int chosenNumber;
 		std::cin >> chosenNumber;
 		result = box.is(chosenNumber);
@@ -21,15 +21,14 @@ int main()
 		}
 		else if (result == 0)
 		{
-			std::cout << "Gratulacje zgadłeś" << std::endl;
-		
+			std::cout << "Gratulacje! Zgadlas" << std::endl;
 		}
 		else
 		{
-			std::cout << "Moja sekretna liczba jest większa" << std::endl;
+			std::cout << "Moja sekretna liczba jest wieksza" << std::endl;
 		}
 	} while (result != 0);
-
+	return 0;
 }
 
 
