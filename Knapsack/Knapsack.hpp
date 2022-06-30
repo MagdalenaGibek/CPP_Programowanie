@@ -40,6 +40,7 @@ public:
 	//sklep powinien byc przekazany do zlodzieja
 	void robWhatever(Shop& shop); //logika 1 - pierwsze lepsze
 	//void robRandom(); //losowo
+	void initFactor(Shop& shop, double* factors);
 	void robGreedy(Shop& shop); //logika 2 - wg efektywnosci
 	int getValue();
 	Item* getBackpackItems() const;

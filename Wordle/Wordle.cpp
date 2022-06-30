@@ -51,7 +51,7 @@ void Wordle::draw()
 {
 	//std::cout << "\033[0;32mOUTPUT \033[0m";
 	system("cls");
-	for (int i = 0; i < 6; i++) //6 bo mamy 6 wierszy
+	for (int i = 0; i < attempt; i++) //6 bo mamy 6 wierszy
 	{
 		//std::cout << "\033[1;31mbold red text\033[0m\n";
 		//std::cout << guesses[i] << '\t';

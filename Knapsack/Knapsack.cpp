@@ -58,30 +58,43 @@ void Robber::robWhatever(Shop& shop)
 
 void Robber::robGreedy(Shop& shop)
 {
+    double* factors = new double[10];
+    initFactor(shop, factors);
     for (int i = 0; i < 10; i++)
     {
         int maxIndex = -1;
         double maxFactor = -1;
         for (int j = 0; j < 10; j++)
         {
-            Item item = shop.peek(j);
-            if (item.weight == 0 || !backpack.fits(item.weight))
+            if (factors[j] > maxFactor)
             {
-                continue;
-            }
-            double efficientFactor = item.value / item.weight;
-            if (efficientFactor > maxFactor)
-            {
-                maxFactor = efficientFactor;
+                maxFactor = factors[j];
                 maxIndex = j;
             }
         }
+        factors[maxIndex] = 0.0;
 
-        if (maxIndex >= 0)
+        // czy zmieści się w plecaku
+        Item item = shop.peek(maxIndex);
+        if (maxFactor == 0.0 || !backpack.fits(item.weight))
         {
-            Item item = shop.steal(maxIndex);
-            backpack.put(item);
+            continue;
         }
+        
+        backpack.put(shop.steal(maxIndex));
+
+        delete[] factors;
+    }
+}
+
+void Robber::initFactor(Shop& shop, double* factors)
+{
+
+    for (int i = 1; i < 10; i++)
+    {
+        Item item = shop.peek(i);
+        double efficientFactor = item.value / item.weight;
+        factors[i] = efficientFactor;
     }
 }
 
